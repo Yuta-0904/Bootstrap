@@ -8,10 +8,6 @@
           transform: translateY(-50%) translateX(-50%);
 }
 
-.top-message .fw-bold {
-  font-size: 5rem;
-}
-
 .card .image-wrap {
   position: relative;
   overflow: hidden;
@@ -26,22 +22,6 @@
           transform: translate(-50%, -50%);
   width: 100%;
   height: 100%;
-}
-
-@media print, screen and (min-width: 768px) {
-  ._sp {
-    display: none;
-  }
-}
-
-._pc {
-  display: none;
-}
-
-@media print, screen and (min-width: 768px) {
-  ._pc {
-    display: block;
-  }
 }
 
 .main-title {
@@ -60,8 +40,24 @@
           transform: translateX(-50%);
 }
 
+h1 {
+  font-size: 3rem;
+}
+
+@media print, screen and (min-width: 768px) {
+  h1 {
+    font-size: 5rem;
+  }
+}
+
 h3 {
-  font-size: 2rem;
+  font-size: 1rem;
+}
+
+@media print, screen and (min-width: 768px) {
+  h3 {
+    font-size: 3rem;
+  }
 }
 
 a {

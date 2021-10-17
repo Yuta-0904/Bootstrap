@@ -14,25 +14,6 @@ $colors: (
   baige: #ffffdd,
 );
 
-@function cl($key) {
-  @return map-get($colors, $key);
-}
-
-// FONT
-// @inlcude TimesNewRoman;
-//--------------------------------------------------
-
-@mixin TimesNewRoman {
-  // font-family: "Times New Roman", "YuMincho", "Hiragino Mincho ProN",
-  //   "Yu Mincho", "MS PMincho", serif;
-  font-family: "Helvetica Neue", "Arial", "Hiragino Sans",
-    "Hiragino Kaku Gothic ProN", "Meiryo", "sans-serif";
-}
-
-// RESPONSIVE
-// @include overTab
-//--------------------------------------------------
-
 @mixin overTab {
   @media print, screen and (min-width: 768px) {
     @content;
@@ -44,23 +25,6 @@ $colors: (
     @content;
   }
 }
-
-// UTILITY
-//--------------------------------------------------
-
-._sp {
-  @include overTab {
-    display: none;
-  }
-}
-
-._pc {
-  display: none;
-  @include overTab {
-    display: block;
-  }
-}
-
 
 .main-title {
   font-size: 3rem;
@@ -76,8 +40,18 @@ $colors: (
   }
 }
 
+h1 {
+  font-size: 3rem;
+  @include overTab {
+    font-size: 5rem;
+  }
+}
+
 h3 {
-  font-size: 2rem;
+  font-size: 1rem;
+  @include overTab {
+    font-size: 3rem;
+  }
 }
 
 a {
