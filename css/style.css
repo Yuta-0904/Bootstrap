@@ -1,0 +1,70 @@
+.top-message {
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+          transform: translateY(-50%) translateX(-50%);
+}
+
+.top-message .fw-bold {
+  font-size: 5rem;
+}
+
+.card .image-wrap {
+  position: relative;
+  overflow: hidden;
+  padding-top: 60%;
+}
+
+.card .image-wrap img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+}
+
+@media print, screen and (min-width: 768px) {
+  ._sp {
+    display: none;
+  }
+}
+
+._pc {
+  display: none;
+}
+
+@media print, screen and (min-width: 768px) {
+  ._pc {
+    display: block;
+  }
+}
+
+.main-title {
+  font-size: 3rem;
+}
+
+.main-title::after {
+  content: "";
+  display: block;
+  width: 40%;
+  height: 3px;
+  background-color: #a00404;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+a {
+  text-decoration: none;
+}
+/*# sourceMappingURL=style.css.map */

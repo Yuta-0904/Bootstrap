@@ -1,0 +1,85 @@
+// COLORS
+// @inlcude cl(black);
+//--------------------------------------------------
+
+$colors: (
+  white: #fff,
+  black: #000,
+  text: #333333,
+  grey: #6e6e6e,
+  lightgrey: #f2f2f2,
+  red: #ff0000,
+  primary: #4d0000,
+  gold: #b8860bea,
+  baige: #ffffdd,
+);
+
+@function cl($key) {
+  @return map-get($colors, $key);
+}
+
+// FONT
+// @inlcude TimesNewRoman;
+//--------------------------------------------------
+
+@mixin TimesNewRoman {
+  // font-family: "Times New Roman", "YuMincho", "Hiragino Mincho ProN",
+  //   "Yu Mincho", "MS PMincho", serif;
+  font-family: "Helvetica Neue", "Arial", "Hiragino Sans",
+    "Hiragino Kaku Gothic ProN", "Meiryo", "sans-serif";
+}
+
+// RESPONSIVE
+// @include overTab
+//--------------------------------------------------
+
+@mixin overTab {
+  @media print, screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin overmobile {
+  @media print, screen and (min-width: 375px) {
+    @content;
+  }
+}
+
+// UTILITY
+//--------------------------------------------------
+
+._sp {
+  @include overTab {
+    display: none;
+  }
+}
+
+._pc {
+  display: none;
+  @include overTab {
+    display: block;
+  }
+}
+
+
+.main-title {
+  font-size: 3rem;
+  &::after {
+    content:"";
+    display:block;
+    width:40%;
+    height:3px;
+    background-color:rgb(160, 4, 4);
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+a {
+  text-decoration: none;
+}
